@@ -1,0 +1,4 @@
+[0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/quanhoang/Desktop/BookStoreApp/conf/logback.xml,/home/quanhoang/Desktop/BookStoreApp/target/scala-2.13/classes/logback.xml)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/quanhoang/Desktop/BookStoreApp/conf/routes,/home/quanhoang/Desktop/BookStoreApp/target/scala-2.13/classes/routes)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/quanhoang/Desktop/BookStoreApp/conf/application.conf,/home/quanhoang/Desktop/BookStoreApp/target/scala-2.13/classes/application.conf)[0m

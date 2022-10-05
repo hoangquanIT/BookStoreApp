@@ -1,0 +1,24 @@
+@(books: Set[Book])
+
+@layout("All books"){
+    <button><a href="@routes.BooksController.create()">Create book</a></button>
+    <table border="1">
+        <caption><h1>All books</h1></caption>
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Author</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        @for(b <- books) {
+            <tr>
+                <td><a href="@routes.BooksController.detail(b.id)">@b.title</a></td>
+                <td align="center">@b.price</td>
+                <td>@b.author</td>
+                <td><a href="@routes.BooksController.edit(b.id)">Edit</a></td>
+                <td><a href="@routes.BooksController.delete(b.id)" onclick="return confirm('Do you really want to delete this book?')">Delete</a></td>
+            </tr>
+        }
+    </table>
+}

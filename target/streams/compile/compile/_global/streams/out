@@ -1,0 +1,10 @@
+[0m[[0m[31merror[0m] [0m[0m/home/quanhoang/Desktop/BookStoreApp/app/models/Book.java:6:8: object avaje is not a member of package com[0m
+[0m[[0m[31merror[0m] [0m[0mimport com.avaje.ebean.Model;[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/quanhoang/Desktop/BookStoreApp/app/models/Book.java:12:27: not found: type Model[0m
+[0m[[0m[31merror[0m] [0m[0mpublic class Book extends Model {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/quanhoang/Desktop/BookStoreApp/app/models/Book.java:8:8: object persistence is not a member of package javax[0m
+[0m[[0m[31merror[0m] [0m[0mimport javax.persistence.Entity;[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0mthree errors found[0m
