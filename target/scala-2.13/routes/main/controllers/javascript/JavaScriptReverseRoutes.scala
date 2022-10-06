@@ -28,39 +28,9 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:7
-    def explore: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.explore",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "explore"})
-        }
-      """
-    )
-  
-    // @LINE:8
-    def tutorial: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.tutorial",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "tutorial"})
-        }
-      """
-    )
-  
-    // @LINE:9
-    def welcome: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.welcome",
-      """
-        function(firstName0,lastName1) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "welcome/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("firstName", firstName0)) + "/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("lastName", lastName1))})
-        }
-      """
-    )
-  
   }
 
-  // @LINE:11
+  // @LINE:7
   class ReverseBooksController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -68,7 +38,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:13
+    // @LINE:9
     def save: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.BooksController.save",
       """
@@ -78,7 +48,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:17
+    // @LINE:13
     def detail: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.BooksController.detail",
       """
@@ -88,27 +58,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:14
-    def edit: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.BooksController.edit",
-      """
-        function(id0) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "books/edit/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Integer]].javascriptUnbind + """)("id", id0))})
-        }
-      """
-    )
-  
-    // @LINE:15
-    def update: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.BooksController.update",
-      """
-        function() {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "books/edit"})
-        }
-      """
-    )
-  
-    // @LINE:16
+    // @LINE:12
     def delete: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.BooksController.delete",
       """
@@ -118,7 +68,27 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:12
+    // @LINE:10
+    def edit: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.BooksController.edit",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "books/edit/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Integer]].javascriptUnbind + """)("id", id0))})
+        }
+      """
+    )
+  
+    // @LINE:11
+    def update: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.BooksController.update",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "books/edit/"})
+        }
+      """
+    )
+  
+    // @LINE:8
     def create: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.BooksController.create",
       """
@@ -128,7 +98,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:11
+    // @LINE:7
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.BooksController.index",
       """
@@ -140,7 +110,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:22
+  // @LINE:21
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -148,7 +118,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:22
+    // @LINE:21
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """

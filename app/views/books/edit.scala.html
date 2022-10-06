@@ -1,14 +1,19 @@
-@(bookForm: Form[Book])(implicit request: Http.Request, messages: play.i18n.Messages)
+@(bookForm: Form[Book])(implicit request: Http.Request, messages: play.i18n.Messages, message: String)
 @import helper._
 
 @layout("Edit book"){
+    @if(message != ""){
+        <div class="alert alert-danger">
+            @message
+        </div>
+    }
     <h1>Edit book</h1>
     @helper.form(action = helper.CSRF(routes.BooksController.update())){
-        @helper.inputText(bookForm("id"))
-        @helper.inputText(bookForm("title"))
-        @helper.inputText(bookForm("price"))
-        @helper.inputText(bookForm("author"))
+        @helper.inputText(bookForm("id"),'class -> "form-control")
+        @helper.inputText(bookForm("title"),'class -> "form-control")
+        @helper.inputText(bookForm("price"),'class -> "form-control")
+        @helper.inputText(bookForm("author"),'class -> "form-control")
 
-        <input type="submit" value="Edit book">
+        <button type="submit" class="btn btn-warning">Edit book</button>
     }
 }

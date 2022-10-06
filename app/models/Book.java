@@ -1,13 +1,24 @@
 package models;
 
+import play.data.validation.Constraints;
+
+import javax.validation.Constraint;
 import java.util.HashSet;
 import java.util.Set;
 
 public class Book {
 
+    @Constraints.Required
     public Integer id;
+    @Constraints.Required
+    @Constraints.MaxLength(255)
+    @Constraints.MinLength(5)
     public String title;
+    @Constraints.Required
+    @Constraints.Min(5)
+    @Constraints.Max(100)
     public Integer price;
+    @Constraints.Required
     public String author;
     public static Set<Book> books;
 

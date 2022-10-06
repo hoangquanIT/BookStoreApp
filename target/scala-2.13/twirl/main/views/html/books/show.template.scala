@@ -21,10 +21,10 @@ import play.data._
 import play.core.j.PlayFormsMagicForJava._
 import scala.jdk.CollectionConverters._
 
-object show extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[Book,play.twirl.api.HtmlFormat.Appendable] {
+object show extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[Book,Http.Request,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(book: Book):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(book: Book)(implicit request: Http.Request):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
@@ -39,9 +39,9 @@ Seq[Any](format.raw/*2.1*/("""
     }
   }
 
-  def render(book:Book): play.twirl.api.HtmlFormat.Appendable = apply(book)
+  def render(book:Book,request:Http.Request): play.twirl.api.HtmlFormat.Appendable = apply(book)(request)
 
-  def f:((Book) => play.twirl.api.HtmlFormat.Appendable) = (book) => apply(book)
+  def f:((Book) => (Http.Request) => play.twirl.api.HtmlFormat.Appendable) = (book) => (request) => apply(book)(request)
 
   def ref: this.type = this
 
@@ -51,8 +51,8 @@ Seq[Any](format.raw/*2.1*/("""
               /*
                   -- GENERATED --
                   SOURCE: app/views/books/show.scala.html
-                  HASH: 6c95c76f2ce57a9c21d9447b2b4ad99502cfeded
-                  MATRIX: 910->1|1016->14|1043->16|1069->34|1107->35|1138->40|1169->45|1181->49|1207->55|1254->76|1266->80|1292->86|1339->107|1351->111|1378->118
+                  HASH: 133c228534a2a00642bbfa92b5f54ab3634ecf1e
+                  MATRIX: 923->1|1061->46|1088->48|1114->66|1152->67|1183->72|1214->77|1226->81|1252->87|1299->108|1311->112|1337->118|1384->139|1396->143|1423->150
                   LINES: 27->1|32->2|33->3|33->3|33->3|34->4|34->4|34->4|34->4|35->5|35->5|35->5|36->6|36->6|36->6
                   -- GENERATED --
               */

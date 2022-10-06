@@ -1,10 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/home/quanhoang/Desktop/BookStoreApp/app/models/Book.java:6:8: object avaje is not a member of package com[0m
-[0m[[0m[31merror[0m] [0m[0mimport com.avaje.ebean.Model;[0m
-[0m[[0m[31merror[0m] [0m[0m       ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/quanhoang/Desktop/BookStoreApp/app/models/Book.java:12:27: not found: type Model[0m
-[0m[[0m[31merror[0m] [0m[0mpublic class Book extends Model {[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/quanhoang/Desktop/BookStoreApp/app/models/Book.java:8:8: object persistence is not a member of package javax[0m
-[0m[[0m[31merror[0m] [0m[0mimport javax.persistence.Entity;[0m
-[0m[[0m[31merror[0m] [0m[0m       ^[0m
-[0m[[0m[31merror[0m] [0m[0mthree errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/quanhoang/Desktop/BookStoreApp/conf/routes:12:1: not enough arguments for method delete: (x$1: Integer, x$2: play.mvc.Http.Request): play.mvc.Result.[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter x$2.[0m
+[0m[[0m[31merror[0m] [0m[0mGET         /books/delete/:id                  controllers.BooksController.delete(id: Integer)[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

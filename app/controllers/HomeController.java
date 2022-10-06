@@ -2,7 +2,7 @@ package controllers;
 
 import play.mvc.*;
 
-import views.html.Home.*;
+import views.html.*;
 
 /**
  * This controller contains an action to handle HTTP requests
@@ -16,20 +16,9 @@ public class HomeController extends Controller {
      * this method will be called when the application receives a
      * <code>GET</code> request with a path of <code>/</code>.
      */
-    public Result index() {
-        return ok(views.html.index.render());
-    }
-    
-    public Result explore() {
-        return ok(views.html.explore.render());
-    }
-    
-    public Result tutorial() {
-        return ok(views.html.tutorial.render());
-    }
 
-    public Result welcome(String firstName, String lastName) {
-        return ok(welcome.render(firstName, lastName));
+    public Result index(Http.Request request) {
+        return ok(index.render(request));
     }
 
 }

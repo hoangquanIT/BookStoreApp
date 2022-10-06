@@ -1,0 +1,3 @@
+[0m[[0m[31merror[0m] [0m[0m[Error] /home/quanhoang/Desktop/BookStoreApp/app/views/layout.scala.html:9[0m
+[0m[[0m[31merror[0m] [0m[0m    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">: Invalid '@' symbol[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mtwirlCompileTemplates[0m) Twirl compilation failed[0m
